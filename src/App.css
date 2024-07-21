@@ -310,3 +310,86 @@
     margin-bottom: 10px;
   }
 }
+
+/* New Arrivals Page styles */
+.new-arrivals-page {
+  padding: 20px;
+}
+
+.new-arrivals-page .header {
+  background-color: #343a40;
+  color: white;
+}
+
+.new-arrivals-page .header-logo img {
+  height: 40px;
+}
+
+.new-arrivals-page .nav-menu a {
+  color: #ffc107;
+}
+
+.new-arrivals-page .nav-menu a:hover {
+  color: #ffeb3b;
+}
+
+.new-arrivals-page .search-bar input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.new-arrivals-page .new-arrival-listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.new-arrivals-page .new-arrival {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.new-arrivals-page .new-arrival img {
+  height: 150px;
+}
+
+.new-arrivals-page .new-arrival button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-arrivals-page .new-arrival button:hover {
+  background-color: #218838;
+}
+
+.new-arrivals-page .filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.new-arrivals-page .filters select {
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .new-arrivals-page .new-arrival-listings {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-arrivals-page .new-arrival {
+    width: 100%;
+    max-width: 300px;
+  }
+}
