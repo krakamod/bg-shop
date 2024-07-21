@@ -7,6 +7,7 @@ import NewArrivalsPage from './NewArrivalsPage';
 import ContactUsPage from './ContactUsPage';
 import ProductDetailsPage from './ProductDetailsPage';
 import AddProductPage from './AddProductPage';
+import EditProductPage from './EditProductPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact-us" component={ContactUsPage} />
         <Route path="/product/:id" component={ProductDetailsPage} />
         <Route path="/add-product" component={AddProductPage} />
+        <Route path="/edit-product/:id" component={EditProductPage} />
       </Switch>
     </Router>
   );
