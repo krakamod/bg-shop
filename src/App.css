@@ -493,3 +493,119 @@
   font-size: 1em;
   color: #6c757d;
 }
+
+/* Product Details Page styles */
+.product-details-page {
+  padding: 20px;
+}
+
+.product-details-page .header {
+  background-color: #343a40;
+  color: white;
+}
+
+.product-details-page .header-logo img {
+  height: 40px;
+}
+
+.product-details-page .nav-menu a {
+  color: #ffc107;
+}
+
+.product-details-page .nav-menu a:hover {
+  color: #ffeb3b;
+}
+
+.product-details-page .search-bar input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.product-details-page .product-title {
+  margin-top: 20px;
+}
+
+.product-details-page .product-images {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.product-details-page .product-images img {
+  height: 200px;
+  margin: 0 10px;
+}
+
+.product-details-page .product-description,
+.product-details-page .product-specifications,
+.product-details-page .product-pricing,
+.product-details-page .customer-reviews,
+.product-details-page .cta-buttons,
+.product-details-page .shipping-information,
+.product-details-page .return-policy,
+.product-details-page .related-products,
+.product-details-page .social-sharing {
+  margin-top: 20px;
+}
+
+.product-details-page .product-specifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-details-page .product-specifications li {
+  margin-bottom: 5px;
+}
+
+.product-details-page .cta-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.product-details-page .cta-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.product-details-page .related-products .product {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.product-details-page .related-products .product img {
+  height: 150px;
+}
+
+.product-details-page .social-sharing a {
+  margin: 0 10px;
+  color: #495057;
+}
+
+.product-details-page .social-sharing a:hover {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .product-details-page .product-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-details-page .product-images img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .product-details-page .related-products .product {
+    width: 100%;
+    max-width: 300px;
+  }
+}
