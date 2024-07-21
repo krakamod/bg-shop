@@ -13,7 +13,7 @@ function HomePage() {
           <ul className="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#shop">Shop</a></li>
-            <li><a href="#categories">Categories</a></li>
+            <li><a href="/categories">Categories</a></li>
             <li><a href="#new-arrivals">New Arrivals</a></li>
             <li><a href="#bestsellers">Bestsellers</a></li>
             <li><a href="#contact-us">Contact Us</a></li>
