@@ -310,3 +310,86 @@
     margin-bottom: 10px;
   }
 }
+
+/* Bestsellers Page styles */
+.bestsellers-page {
+  padding: 20px;
+}
+
+.bestsellers-page .header {
+  background-color: #343a40;
+  color: white;
+}
+
+.bestsellers-page .header-logo img {
+  height: 40px;
+}
+
+.bestsellers-page .nav-menu a {
+  color: #ffc107;
+}
+
+.bestsellers-page .nav-menu a:hover {
+  color: #ffeb3b;
+}
+
+.bestsellers-page .search-bar input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.bestsellers-page .filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.bestsellers-page .filters select {
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.bestsellers-page .bestseller-listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.bestsellers-page .bestseller {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.bestsellers-page .bestseller img {
+  height: 150px;
+}
+
+.bestsellers-page .bestseller button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bestsellers-page .bestseller button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .bestsellers-page .bestseller-listings {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bestsellers-page .bestseller {
+    width: 100%;
+    max-width: 300px;
+  }
+}
