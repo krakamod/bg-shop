@@ -609,3 +609,48 @@
     max-width: 300px;
   }
 }
+
+/* Add Product Page styles */
+.add-product-page {
+  padding: 20px;
+}
+
+.add-product-page h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.add-product-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-product-page form div {
+  margin-bottom: 10px;
+}
+
+.add-product-page label {
+  font-weight: bold;
+}
+
+.add-product-page input,
+.add-product-page textarea,
+.add-product-page select {
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.add-product-page button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.add-product-page button:hover {
+  background-color: #0056b3;
+}
