@@ -57,4 +57,4 @@ yarn test
 
 ### New Feature: Add Product
 
-The application now includes a feature for adding new products. You can access this feature by navigating to the "Add Product" page from the header or navigation menu. The "Add Product" page allows you to add product details, upload images, set pricing, and more. The form includes validation for required fields and provides feedback for successful or failed product addition.
+The application now includes a feature for adding new products. You can access this feature by navigating to the "Add Product" page from the header or navigation menu. The "Add Product" page allows you to add product details, upload images, set pricing, and more. The form includes validation for required fields and provides feedback for successful or failed product addition. The form also includes a field for specifying the product weight.
