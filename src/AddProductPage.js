@@ -9,6 +9,7 @@ function AddProductPage() {
   const [stockQuantity, setStockQuantity] = useState('');
   const [sku, setSku] = useState('');
   const [shippingInfo, setShippingInfo] = useState('');
+  const [productWeight, setProductWeight] = useState(''); // Pbf2d
   const [productVariants, setProductVariants] = useState([]);
   const [tags, setTags] = useState('');
   const [seoSettings, setSeoSettings] = useState('');
@@ -34,6 +35,7 @@ function AddProductPage() {
     if (!stockQuantity) errors.stockQuantity = 'Stock quantity is required';
     if (!sku) errors.sku = 'SKU is required';
     if (!shippingInfo) errors.shippingInfo = 'Shipping information is required';
+    if (!productWeight) errors.productWeight = 'Product weight is required'; // P07c9
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
@@ -59,6 +61,7 @@ function AddProductPage() {
           stockQuantity,
           sku,
           shippingInfo,
+          productWeight, // Pcf13
           productVariants,
           tags,
           seoSettings,
@@ -97,6 +100,7 @@ function AddProductPage() {
           stockQuantity,
           sku,
           shippingInfo,
+          productWeight, // Pcf13
           productVariants,
           tags,
           seoSettings,
@@ -183,6 +187,15 @@ function AddProductPage() {
             onChange={(e) => setShippingInfo(e.target.value)}
           ></textarea>
           {formErrors.shippingInfo && <p className="error">{formErrors.shippingInfo}</p>}
+        </div>
+        <div>
+          <label>Product Weight:</label> {/* P6523 */}
+          <input
+            type="number"
+            value={productWeight}
+            onChange={(e) => setProductWeight(e.target.value)}
+          />
+          {formErrors.productWeight && <p className="error">{formErrors.productWeight}</p>}
         </div>
         <div>
           <label>Product Variants:</label>
