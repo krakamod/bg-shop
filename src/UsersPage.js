@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 function UsersPage() {
   const [users, setUsers] = useState([]);
@@ -52,6 +52,7 @@ function UsersPage() {
           </li>
         ))}
       </ul>
+      <Link to="/invite">Invite User</Link>
     </div>
   );
 }

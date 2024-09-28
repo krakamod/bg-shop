@@ -73,3 +73,7 @@ To access the admin panel, follow these steps:
 ### New Feature: Users Page
 
 The application now includes a Users page that displays the list of users. The page can be seen only by admins. The list item includes information if the user is admin or not. Admin users can access the Users page by navigating to the "Users" page from the header or navigation menu.
+
+### New Feature: Invite Page
+
+The application now includes an Invite page that allows admin users to invite new users by entering their email addresses. The page can be accessed only by admins. Admin users can access the Invite page by navigating to the "Invite" page from the header or navigation menu.
