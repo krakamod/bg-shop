@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function CatalogPage() {
   return (
@@ -44,6 +45,9 @@ function CatalogPage() {
             <h2>Game 1</h2>
             <p>Description of Game 1</p>
             <p>Price: $29.99</p>
+            <Link to="/product/1">
+              <button>View Details</button>
+            </Link>
             <button>Add to Cart</button>
           </div>
           <div className="product">
@@ -51,6 +55,9 @@ function CatalogPage() {
             <h2>Game 2</h2>
             <p>Description of Game 2</p>
             <p>Price: $39.99</p>
+            <Link to="/product/2">
+              <button>View Details</button>
+            </Link>
             <button>Add to Cart</button>
           </div>
           <div className="product">
@@ -58,6 +65,9 @@ function CatalogPage() {
             <h2>Game 3</h2>
             <p>Description of Game 3</p>
             <p>Price: $49.99</p>
+            <Link to="/product/3">
+              <button>View Details</button>
+            </Link>
             <button>Add to Cart</button>
           </div>
         </div>
@@ -68,6 +78,9 @@ function CatalogPage() {
             <h2>Featured Game 1</h2>
             <p>Description of Featured Game 1</p>
             <p>Price: $59.99</p>
+            <Link to="/product/4">
+              <button>View Details</button>
+            </Link>
             <button>Buy Now</button>
           </div>
         </div>

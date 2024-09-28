@@ -311,12 +311,12 @@
   }
 }
 
-/* Bestsellers Page styles */
-.bestsellers-page {
+
+.new-arrivals-page {
   padding: 20px;
 }
 
-.bestsellers-page .header {
+.new-arrivals-page .header {
   background-color: #343a40;
   color: white;
 }
@@ -333,18 +333,62 @@
   color: #ffeb3b;
 }
 
-.bestsellers-page .search-bar input {
+.new-arrivals-page .header-logo img {
+  height: 40px;
+}
+
+.new-arrivals-page .nav-menu a {
+  color: #ffc107;
+}
+
+.new-arrivals-page .nav-menu a:hover {
+  color: #ffeb3b;
+}
+
+.new-arrivals-page .search-bar input {
   width: 100%;
   max-width: 300px;
 }
 
-.bestsellers-page .filters {
+.new-arrivals-page .new-arrival-listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.new-arrivals-page .new-arrival {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.new-arrivals-page .new-arrival img {
+  height: 150px;
+}
+
+.new-arrivals-page .new-arrival button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-arrivals-page .new-arrival button:hover {
+  background-color: #218838;
+}
+
+.new-arrivals-page .filters {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.bestsellers-page .filters select {
+.new-arrivals-page .filters select {
   padding: 5px;
   border: 1px solid #ced4da;
   border-radius: 4px;
@@ -356,7 +400,196 @@
   justify-content: space-around;
 }
 
-.bestsellers-page .bestseller {
+@media (max-width: 768px) {
+  .new-arrivals-page .new-arrival-listings {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-arrivals-page .new-arrival {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Contact Us Page styles */
+.contact-us-page {
+  padding: 20px;
+}
+
+.contact-us-page .header {
+  background-color: #343a40;
+  color: white;
+}
+
+.contact-us-page .header-logo img {
+  height: 40px;
+}
+
+.contact-us-page .nav-menu a {
+  color: #ffc107;
+}
+
+.contact-us-page .nav-menu a:hover {
+  color: #ffeb3b;
+}
+
+.contact-us-page .search-bar input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.contact-us-page .contact-form {
+  margin-top: 20px;
+}
+
+.contact-us-page .contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us-page .contact-form form div {
+  margin-bottom: 10px;
+}
+
+.contact-us-page .contact-form label {
+  font-weight: bold;
+}
+
+.contact-us-page .contact-form input,
+.contact-us-page .contact-form textarea {
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.contact-us-page .contact-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-us-page .contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-us-page .contact-details {
+  margin-top: 20px;
+}
+
+.contact-us-page .contact-details p {
+  font-size: 1em;
+  color: #6c757d;
+}
+
+.contact-us-page .social-media-links {
+  margin-top: 20px;
+}
+
+.contact-us-page .social-media-links a {
+  margin: 0 10px;
+  color: #495057;
+}
+
+.contact-us-page .social-media-links a:hover {
+  color: #007bff;
+}
+
+.contact-us-page .faq {
+  margin-top: 20px;
+}
+
+.contact-us-page .faq h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.contact-us-page .faq p {
+  font-size: 1em;
+  color: #6c757d;
+}
+
+/* Product Details Page styles */
+.product-details-page {
+  padding: 20px;
+}
+
+.product-details-page .header {
+  background-color: #343a40;
+  color: white;
+}
+
+.product-details-page .header-logo img {
+  height: 40px;
+}
+
+.product-details-page .nav-menu a {
+  color: #ffc107;
+}
+
+.product-details-page .nav-menu a:hover {
+  color: #ffeb3b;
+}
+
+.product-details-page .search-bar input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.product-details-page .product-title {
+  margin-top: 20px;
+}
+
+.product-details-page .product-images {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.product-details-page .product-images img {
+  height: 200px;
+  margin: 0 10px;
+}
+
+.product-details-page .product-description,
+.product-details-page .product-specifications,
+.product-details-page .product-pricing,
+.product-details-page .customer-reviews,
+.product-details-page .cta-buttons,
+.product-details-page .shipping-information,
+.product-details-page .return-policy,
+.product-details-page .related-products,
+.product-details-page .social-sharing {
+  margin-top: 20px;
+}
+
+.product-details-page .product-specifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-details-page .product-specifications li {
+  margin-bottom: 5px;
+}
+
+.product-details-page .cta-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.product-details-page .cta-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.product-details-page .related-products .product {
   border: 1px solid #dee2e6;
   border-radius: 4px;
   padding: 10px;
@@ -382,14 +615,76 @@
   background-color: #218838;
 }
 
+.product-details-page .related-products .product img {
+  height: 150px;
+}
+
+.product-details-page .social-sharing a {
+  margin: 0 10px;
+  color: #495057;
+}
+
+.product-details-page .social-sharing a:hover {
+  color: #007bff;
+}
+
 @media (max-width: 768px) {
-  .bestsellers-page .bestseller-listings {
     flex-direction: column;
     align-items: center;
   }
 
-  .bestsellers-page .bestseller {
+  .product-details-page .product-images img {
     width: 100%;
     max-width: 300px;
   }
+
+  .product-details-page .related-products .product {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Add Product Page styles */
+.add-product-page {
+  padding: 20px;
+}
+
+.add-product-page h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.add-product-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-product-page form div {
+  margin-bottom: 10px;
+}
+
+.add-product-page label {
+  font-weight: bold;
+}
+
+.add-product-page input,
+.add-product-page textarea,
+.add-product-page select {
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.add-product-page button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.add-product-page button:hover {
+  background-color: #0056b3;
 }
