@@ -688,3 +688,38 @@
 .add-product-page button:hover {
   background-color: #0056b3;
 }
+
+/* Admin Panel styles */
+.admin-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.admin-nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.admin-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.admin-nav li {
+  margin: 0 10px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.admin-nav li:hover {
+  text-decoration: underline;
+}
+
+.admin-content {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 20px;
+}

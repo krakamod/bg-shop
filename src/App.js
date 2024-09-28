@@ -11,6 +11,7 @@ import AddProductPage from './AddProductPage';
 import EditProductPage from './EditProductPage';
 import UsersPage from './UsersPage';
 import InvitePage from './InvitePage';
+import AdminPanel from './AdminPanel';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <li><a href="/add-product">Add Product</a></li>
             <li><a href="/users">Users</a></li>
             <li><a href="/invite">Invite</a></li>
+            <li><a href="/admin">Admin Panel</a></li>
           </ul>
         </nav>
       </header>
@@ -46,6 +48,7 @@ function App() {
         <Route path="/edit-product/:id" component={EditProductPage} />
         <Route path="/users" component={UsersPage} />
         <Route path="/invite" component={InvitePage} />
+        <Route path="/admin" component={AdminPanel} />
       </Switch>
     </Router>
   );
