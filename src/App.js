@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './HomePage';
 import CatalogPage from './CatalogPage';
 import CategoriesPage from './CategoriesPage';
+import BestsellersPage from './BestsellersPage';
 import NewArrivalsPage from './NewArrivalsPage';
 import ContactUsPage from './ContactUsPage';
 import ProductDetailsPage from './ProductDetailsPage';
@@ -33,6 +34,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/catalog" component={CatalogPage} />
         <Route path="/categories" component={CategoriesPage} />
+        <Route path="/bestsellers" component={BestsellersPage} />
         <Route path="/new-arrivals" component={NewArrivalsPage} />
         <Route path="/contact-us" component={ContactUsPage} />
         <Route path="/product/:id" component={ProductDetailsPage} />
