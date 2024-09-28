@@ -13,6 +13,8 @@ function AddProductPage() {
   const [tags, setTags] = useState('');
   const [seoSettings, setSeoSettings] = useState('');
   const [visibility, setVisibility] = useState('draft');
+  const [formErrors, setFormErrors] = useState({});
+  const [feedbackMessage, setFeedbackMessage] = useState('');
 
   const handleImageUpload = (event) => {
     const files = Array.from(event.target.files);
@@ -23,12 +25,93 @@ function AddProductPage() {
     setProductVariants([...productVariants, { size: '', color: '', style: '' }]);
   };
 
-  const handleSave = () => {
-    // Save product as draft
+  const validateForm = () => {
+    const errors = {};
+    if (!productTitle) errors.productTitle = 'Product title is required';
+    if (!productDescription) errors.productDescription = 'Product description is required';
+    if (!category) errors.category = 'Category is required';
+    if (!price) errors.price = 'Price is required';
+    if (!stockQuantity) errors.stockQuantity = 'Stock quantity is required';
+    if (!sku) errors.sku = 'SKU is required';
+    if (!shippingInfo) errors.shippingInfo = 'Shipping information is required';
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
   };
 
-  const handlePublish = () => {
-    // Publish product
+  const handleSave = async () => {
+    if (!validateForm()) {
+      setFeedbackMessage('Please fill in all required fields');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/products', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          productTitle,
+          productDescription,
+          productImages,
+          category,
+          price,
+          stockQuantity,
+          sku,
+          shippingInfo,
+          productVariants,
+          tags,
+          seoSettings,
+          visibility,
+        }),
+      });
+
+      if (response.ok) {
+        setFeedbackMessage('Product saved successfully');
+      } else {
+        setFeedbackMessage('Failed to save product');
+      }
+    } catch (error) {
+      setFeedbackMessage('An error occurred while saving the product');
+    }
+  };
+
+  const handlePublish = async () => {
+    if (!validateForm()) {
+      setFeedbackMessage('Please fill in all required fields');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/products/publish', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          productTitle,
+          productDescription,
+          productImages,
+          category,
+          price,
+          stockQuantity,
+          sku,
+          shippingInfo,
+          productVariants,
+          tags,
+          seoSettings,
+          visibility,
+        }),
+      });
+
+      if (response.ok) {
+        setFeedbackMessage('Product published successfully');
+      } else {
+        setFeedbackMessage('Failed to publish product');
+      }
+    } catch (error) {
+      setFeedbackMessage('An error occurred while publishing the product');
+    }
   };
 
   return (
@@ -42,6 +125,7 @@ function AddProductPage() {
             value={productTitle}
             onChange={(e) => setProductTitle(e.target.value)}
           />
+          {formErrors.productTitle && <p className="error">{formErrors.productTitle}</p>}
         </div>
         <div>
           <label>Product Description:</label>
@@ -49,6 +133,7 @@ function AddProductPage() {
             value={productDescription}
             onChange={(e) => setProductDescription(e.target.value)}
           ></textarea>
+          {formErrors.productDescription && <p className="error">{formErrors.productDescription}</p>}
         </div>
         <div>
           <label>Product Images:</label>
@@ -62,6 +147,7 @@ function AddProductPage() {
             <option value="family">Family</option>
             <option value="card">Card</option>
           </select>
+          {formErrors.category && <p className="error">{formErrors.category}</p>}
         </div>
         <div>
           <label>Price:</label>
@@ -70,6 +156,7 @@ function AddProductPage() {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
+          {formErrors.price && <p className="error">{formErrors.price}</p>}
         </div>
         <div>
           <label>Stock Quantity:</label>
@@ -78,6 +165,7 @@ function AddProductPage() {
             value={stockQuantity}
             onChange={(e) => setStockQuantity(e.target.value)}
           />
+          {formErrors.stockQuantity && <p className="error">{formErrors.stockQuantity}</p>}
         </div>
         <div>
           <label>SKU:</label>
@@ -86,6 +174,7 @@ function AddProductPage() {
             value={sku}
             onChange={(e) => setSku(e.target.value)}
           />
+          {formErrors.sku && <p className="error">{formErrors.sku}</p>}
         </div>
         <div>
           <label>Shipping Information:</label>
@@ -93,6 +182,7 @@ function AddProductPage() {
             value={shippingInfo}
             onChange={(e) => setShippingInfo(e.target.value)}
           ></textarea>
+          {formErrors.shippingInfo && <p className="error">{formErrors.shippingInfo}</p>}
         </div>
         <div>
           <label>Product Variants:</label>
@@ -172,6 +262,7 @@ function AddProductPage() {
           </button>
         </div>
       </form>
+      {feedbackMessage && <p className="feedback">{feedbackMessage}</p>}
     </div>
   );
 }

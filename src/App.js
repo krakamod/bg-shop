@@ -12,6 +12,23 @@ import EditProductPage from './EditProductPage';
 function App() {
   return (
     <Router>
+      <header className="header">
+        <div className="header-logo">
+          <img src="logo.png" alt="Shop Logo" />
+          <h1>Board Games Shop</h1>
+        </div>
+        <p className="header-tagline">Your Ultimate Board Game Destination</p>
+        <nav>
+          <ul className="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/catalog">Catalog</a></li>
+            <li><a href="/categories">Categories</a></li>
+            <li><a href="/new-arrivals">New Arrivals</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/add-product">Add Product</a></li>
+          </ul>
+        </nav>
+      </header>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/catalog" component={CatalogPage} />
