@@ -9,6 +9,8 @@ import ContactUsPage from './ContactUsPage';
 import ProductDetailsPage from './ProductDetailsPage';
 import AddProductPage from './AddProductPage';
 import EditProductPage from './EditProductPage';
+import UsersPage from './UsersPage';
+import InvitePage from './InvitePage';
 import AdminPanel from './AdminPanel';
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
             <li><a href="/new-arrivals">New Arrivals</a></li>
             <li><a href="/contact-us">Contact Us</a></li>
             <li><a href="/add-product">Add Product</a></li>
+            <li><a href="/users">Users</a></li>
+            <li><a href="/invite">Invite</a></li>
             <li><a href="/admin">Admin Panel</a></li>
           </ul>
         </nav>
@@ -42,6 +46,8 @@ function App() {
         <Route path="/product/:id" component={ProductDetailsPage} />
         <Route path="/add-product" component={AddProductPage} />
         <Route path="/edit-product/:id" component={EditProductPage} />
+        <Route path="/users" component={UsersPage} />
+        <Route path="/invite" component={InvitePage} />
         <Route path="/admin" component={AdminPanel} />
       </Switch>
     </Router>
