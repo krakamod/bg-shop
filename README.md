@@ -69,3 +69,7 @@ To access the admin panel, follow these steps:
 1. Ensure you are logged in as an admin user.
 2. Navigate to the "Admin Panel" page from the header or navigation menu.
 3. Use the navigation links within the admin panel to manage products, orders, and users.
+
+### New Feature: Users Page
+
+The application now includes a Users page that displays the list of users. The page can be seen only by admins. The list item includes information if the user is admin or not. Admin users can access the Users page by navigating to the "Users" page from the header or navigation menu.
