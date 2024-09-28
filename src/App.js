@@ -10,6 +10,7 @@ import ProductDetailsPage from './ProductDetailsPage';
 import AddProductPage from './AddProductPage';
 import EditProductPage from './EditProductPage';
 import UsersPage from './UsersPage';
+import InvitePage from './InvitePage';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <li><a href="/contact-us">Contact Us</a></li>
             <li><a href="/add-product">Add Product</a></li>
             <li><a href="/users">Users</a></li>
+            <li><a href="/invite">Invite</a></li>
           </ul>
         </nav>
       </header>
@@ -43,6 +45,7 @@ function App() {
         <Route path="/add-product" component={AddProductPage} />
         <Route path="/edit-product/:id" component={EditProductPage} />
         <Route path="/users" component={UsersPage} />
+        <Route path="/invite" component={InvitePage} />
       </Switch>
     </Router>
   );
